@@ -1,0 +1,57 @@
+camera:
+  left_index: 4
+  right_index: 5
+  width: 1280
+  height: 720
+  fps: 15
+  max_pair_delta_ms: 20
+
+capture:
+  minimum_samples: 20
+  target_samples: 35
+  auto_capture_default: true
+  auto_capture_cooldown_s: 0.8
+  live_detection_interval_s: 0.25
+  max_preview_lag_ms: 250
+  work_distance_hint_mm: 100
+  preferred_distance_range_mm: [70, 130]
+  blur_threshold: 80.0
+  min_board_area_ratio: 0.01
+  boundary_margin_px: 8
+
+boards:
+  - preset_name: "12-150-10"
+    inner_corners_cols: 11
+    inner_corners_rows: 8
+    square_size_mm: 10.00
+    notes: ""
+    manufacturer: ""
+    measured_total_length_mm: null
+  - preset_name: "12-100-6"
+    inner_corners_cols: 11
+    inner_corners_rows: 8
+    square_size_mm: 6.00
+    notes: ""
+    manufacturer: ""
+    measured_total_length_mm: null
+  - preset_name: "12-70-5"
+    inner_corners_cols: 11
+    inner_corners_rows: 8
+    square_size_mm: 5.00
+    notes: ""
+    manufacturer: ""
+    measured_total_length_mm: null
+
+calibration:
+  model: pinhole
+  detector: findChessboardCornersSB
+  fix_intrinsic_for_stereo: true
+  rectify_alpha: 0.0
+
+evaluation:
+  mono_good_rms_px: 0.3
+  mono_warning_rms_px: 0.6
+  mono_poor_rms_px: 1.0
+  stereo_target_mean_vertical_px: 0.5
+  depth_evaluation_distance_mm: 100
+  disparity_noise_px: [0.2, 0.5, 1.0]
